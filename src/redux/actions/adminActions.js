@@ -1,12 +1,11 @@
 import axios from "axios";
 import { message } from "antd";
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://bikezzz.onrender.com/api",
 });
 
 export const adminLogin = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
-
   try {
     const response = await API.post("/admin/login", reqObj);
     localStorage.setItem("admin", JSON.stringify(response.data));

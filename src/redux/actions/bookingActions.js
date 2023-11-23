@@ -1,7 +1,7 @@
 import axios from "axios";
 import { message } from "antd";
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://bikezzz.onrender.com/api",
 });
 
 export const BookCar = (reqObj) => async (dispatch) => {
